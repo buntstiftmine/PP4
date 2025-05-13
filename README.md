@@ -56,7 +56,23 @@ In this exercise you will:
 
 ```bash
 # 1) The exact ssh command you ran
+
+ssh root@192.168.2.110
+
 # 2) A detailed, step-by-step explanation of what happened at each stage
+
+- server answer to ssh command, including information about key fingerprint of the host:
+The authenticity of host '192.168.2.110 (192.168.2.110)' can't be established. ED25519 key fingerprint is [SHA256:xxx].
+This key is not known by any other names.
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+Warning: Permanently added '192.168.2.110' (ED25519) to the list of known hosts.
+
+- server requests password for transmitted user (root)
+
+- server posts operating system information:
+Linux Uranus 5.10.0-0.deb10.16-amd64 #1 SMP Debian 5.10.127-2~bpo10+1 (2022-07-28) x86_64
+
+- with exit the connection to the host is closed.
 ```
 
 ---
@@ -85,8 +101,17 @@ In this exercise you will:
 
 ```bash
 # 1) The ssh-keygen command you ran
+
+ssh-keygen -t ed25519 -C "marie.schmalz@stud.thga.de"
+
 # 2) The file paths of the generated keys
+
+/home/mine/.ssh/id_ed25519
+
 # 3) Your written explanation (3–5 sentences) of the signature process
+
+
+
 ```
 
 ---
@@ -127,6 +152,7 @@ In this exercise you will:
 ```text
 # 1) The full contents of your ~/.ssh/config
 # 2) A short explanation (3–4 sentences) of how the config simplifies connections
+
 ```
 
 ---
