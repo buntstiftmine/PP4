@@ -111,7 +111,8 @@ ssh-keygen -t ed25519 -C "marie.schmalz@stud.thga.de"
 
 # 3) Your written explanation (3–5 sentences) of the signature process
 
-
+A sender can generate a digital signiture with their private key. The signiture can be verified by recipient with access to the public key. Attached to data the verified signature can provide evidence that the data has not been tampered.
+Ed25519 is preferred because it is short and fast while still providing a high level of security.
 
 ```
 
@@ -159,6 +160,8 @@ Host testserver
         IdentityFile ~/.ssh/id_ed25519
 
 # 2) A short explanation (3–4 sentences) of how the config simplifies connections
+
+SSH reads the config file where the parameters for different hosts are listed. With the config file Hosts can be matched with their HostNames. The difference between HostName and Host is that one resembles the adress of the server ("Hostname") and the other can be chosen a a local alias for the server. By chosing aliases it is possible to simply run "ssh <alias>" instead of typing long commands.
 
 ```
 
