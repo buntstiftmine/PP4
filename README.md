@@ -107,6 +107,7 @@ ssh-keygen -t ed25519 -C "marie.schmalz@stud.thga.de"
 # 2) The file paths of the generated keys
 
 /home/mine/.ssh/id_ed25519
+/home/mine/.ssh/id_ed25519.pub
 
 # 3) Your written explanation (3–5 sentences) of the signature process
 
@@ -151,6 +152,12 @@ ssh-keygen -t ed25519 -C "marie.schmalz@stud.thga.de"
 
 ```text
 # 1) The full contents of your ~/.ssh/config
+
+Host testserver
+        User root
+        HostName 192.168.2.110
+        IdentityFile ~/.ssh/id_ed25519
+
 # 2) A short explanation (3–4 sentences) of how the config simplifies connections
 
 ```
